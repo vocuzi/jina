@@ -136,9 +136,9 @@ final_deps = standard_deps
 # Use env var to enable a minimum installation of Jina
 # JINA_PIP_INSTALL_CORE=1 pip install jina
 # JINA_PIP_INSTALL_PERF=1 pip install jina
-if os.environ.get('JINA_PIP_INSTALL_CORE'):
+if os.environ.get('JINA_PIP_INSTALL_CORE') == '1':
     final_deps = core_deps
-elif os.environ.get('JINA_PIP_INSTALL_PERF'):
+elif os.environ.get('JINA_PIP_INSTALL_PERF') == '1':
     final_deps = perf_deps
 
 setup(
